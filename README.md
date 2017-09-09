@@ -14,11 +14,12 @@ I am open to improvement/suggestions always. Feel free to contact me at sowmya.d
 
 ## Technologies Used
 
+* SSH
 * HTML
 * CSS
 * BOOTSTRAP
 * REACT JS
-* AWS 
+* AWS
 
 ### License
 
