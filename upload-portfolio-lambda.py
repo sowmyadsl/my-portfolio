@@ -8,14 +8,24 @@ import mimetypes
 def lambda_handler(event, context):
     sns = boto3.resource('sns')
     topic = sns.Topic('arn:aws:sns:us-west-2:064452207999:deployPortfolioTopic')
-
+    location = {
+        "bucketName": 'portfoliobuild.sowmyadinavahi.me',
+        "objectKey": 'portfoliobuild.zip'
+    }
     try:
+        job = event.get("CodePipeline.job")
+
+        if job:
+            for artifact in job["data"]["inputArtifacts"]:
+                if artifact["name"] == "MyAppBuild":
+                    location = artifact["location"]["s3Location"]
+
         s3 = boto3.resource('s3', config=Config(signature_version='s3v4'))
         portfolio_bucket = s3.Bucket('portfolio.sowmyadinavahi.me')
-        build_bucket = s3.Bucket('portfoliobuild.sowmyadinavahi.me')
+        build_bucket = s3.Bucket(location["bucketName"])
 
         portfolio_zip = io.BytesIO()
-        build_bucket.download_fileobj('portfoliobuild.zip', portfolio_zip)
+        build_bucket.download_fileobj(location["objectKey"], portfolio_zip)
 
         with zipfile.ZipFile(portfolio_zip) as myzip:
             for nm in myzip.namelist():
@@ -25,7 +35,9 @@ def lambda_handler(event, context):
 
         print "Job Done!"
         topic.publish(Subject="portfolio deployed", Message="Portfolio deployed Successfully.")
+        if job:
+            codepipeline = boto3.client('codepipeline')
+            codepipeline.put_job_success_result(jobId=job["id"])
     except:
         topic.publish(Subject="portfolio deploy failed", Message="Portfolio was not deployed successfully!")
         raise
-    
