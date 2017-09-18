@@ -4,8 +4,15 @@
     <meta charset="utf-8">
     <title>Sowmya Dinavahi : Front End Developer</title>
     <link rel="stylesheet" href="styles/main.css"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/4.4.0/typeit.min.js"></script>
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link rel=”stylesheet” id=”font-awesome-css” href=”//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css” type=”text/css” media=”screen”>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cardo"/>
@@ -14,13 +21,23 @@
   <body>
     <main class="overflow--auto">
       <h1 class="color--skyBlue section__heading--largest">
-        SOWMYA DINAVAHI
+        SD
       </h1>
 
       <ul class="section--social">
 
         <!--Links to relevant professional social media & resume -->
         <!-- See: http://fontawesome.io/icons/#brand for more -->
+
+        <!-- Link to Instagram In profile -->
+        <li class="socialWrapper">
+          <a class="color--skyBlue social"
+             title="Instagram Profile"
+             target="_blank"
+             href="https://www.instagram.com/sowmyadsl/">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
 
         <!-- Link to Linked In profile -->
         <li class="socialWrapper">
@@ -46,12 +63,37 @@
         <li class="socialWrapper">
           <a class="social color--skyBlue"
              title="Resume"
-             href="Sowmya Dinavahi-Web Developer-Resume.pdf">
+             href="SowmyaDinavahi-Resume.pdf">
             <i class="fa fa-file-text"></i>
           </a>
         </li>
+
+
       </ul>
     </main>
+
+
+    <section class="about-me-section">
+      <div class="prof-picture">
+          <img src="images/sowmya.jpg" alt="">
+      </div>
+      <div class="about-card">
+          Hello! I'm  <span class="type-it">Sowmya.</span>
+      </div>
+    </section>
+
+
+    <div class="scrollback">
+      <a href="#" class="back-to-top">
+        <i class="fa fa-arrow-circle-up"></i>
+      </a>
+    </div>
+    <section class="section section--alignCentered section--description">
+      <p class="color--darkgrey section__description">
+        As far as I've known I have always been fond of computers and mobile applications. Coding had taught me how to think radically and improve my problem solving skills. Everytime I code, the challenges I face motivated me more to learn better and drew me more into programming. I work with Ruby on Rails, ReactJs, AngularJs frameworks. I primarily use JavaScript ES6, HTML5 and CSS3 for building web applications. I am passionate about developing applications that are functional, easy to use, and provide rich user experience.
+      </p>
+    </section>
+
 
     <section class="background--skyBlue section">
       <h2 class="color--cloud margin--none section__text--centered">
@@ -60,22 +102,10 @@
     </section>
 
     <div id="example-work">
-      It works!
+
     </div>
-
-
-
-    <section class="background--skyBlue section">
-      <h2 class="color--cloud margin--none section__text--centered">
-        About Me
-      </h2>
-    </section>
-
-    <section class="section section--alignCentered section--description">
-      <p class="color--darkgrey section__description">
-        As far as I've known I have always been fond of computers and mobile applications. Coding taught me how to think radically and improve my problem solving skills. Everytime I code, the challenges I face motivated me more to learn better and drew me more into programming. I work with Ruby on Rails, Reactjs, Angular 2 frameworks. I primarily use JavaScript ES6, HTML5 and CSS3 for building web applications. I am passionate about developing applications that are functional, easy to use, and provide rich user experience.
-      </p>
-    </section>
+    <hr>
+    <footer>&copy; Copyright 2017 Created by Sowmya Dinavahi &#10047; Built using React and Serverless &#10047;</footer>
   </body>
   <script type="text/javascript" src="dist/bundle.js"></script>
 </html>

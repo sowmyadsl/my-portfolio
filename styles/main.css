@@ -21,11 +21,11 @@
 */
 
 .background--skyBlue {
-  background-color: rgb(52, 152, 219);
+  background-color: rgba(20,26,32,1);
 }
 
 .color--skyBlue {
-  color: rgb(52, 152, 219);
+  color: rgba(20,26,32,1);
 }
 
 .color--cloud {
@@ -80,6 +80,39 @@ h1, h2, h3, h4, h5, h6 {
 /*
   Sections
 */
+.about-me-section {
+  background-color: rgba(20,26,32,1);
+  display: flex;
+  /*flex-wrap: wrap;*/
+  font-size: 4.2rem;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.prof-picture{
+  width: 30%;
+  margin: 5px;
+}
+
+.prof-picture img {
+  height: auto;
+  clear: both;
+  width: 100%;
+}
+
+.about-card{
+  background-color: white;
+  color: black;
+  padding: 5%;
+  margin: 5%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: 50%;
+  font-weight: bolder;
+  text-align: center;
+}
+
 
 .section {
   font-size: 4.2rem;
@@ -155,6 +188,7 @@ h1, h2, h3, h4, h5, h6 {
 */
 
 .section__heading--largest {
+  border: 2px solid black;
   float: left;
   font-size: 5rem;
   margin-left: 2rem;
@@ -228,4 +262,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal__image {
   opacity: 0.2;
+}
+
+/* Back to Top */
+.back-to-top {
+  background: none;
+  margin: 0;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  width: 70px;
+  height: 70px;
+  z-index: 100;
+  text-decoration: none;
+  color: white;
+  display: none;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(20,26,32,0.2);
+}
+
+.back-to-top i {
+  font-size: 60px;
+  text-shadow: 0px 0px 20px rgba(20,26,32,0.5);
+}
+
+footer{
+  font-family: monospace;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 2.5%;
+}
+
+
+.about-card .type-it{
+}
+
+
+@media screen and (max-width: 900px){
+    .about-me-section {
+      flex-direction: column;
+    }
+    .about-card {
+      width: 95%;
+    }
 }
