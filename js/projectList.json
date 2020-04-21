@@ -1,0 +1,34 @@
+{
+  "projectList": [
+    {
+      "title": "Ecommerce Cart using Reactjs",
+      "href": "https://github.com/sowmyadsl/ecommerce-cart-app",
+      "desc": "A Simple React-Redux Application that lets users select products and add to cart, update and delete and show a total amount",
+      "image": {
+        "desc": "Ecommerce-App ",
+        "src": "images/adidas-app.png",
+        "comment": ""
+      }
+    },
+    {
+      "title": "Image Slider using ReactJs",
+      "href": "https://github.com/sowmyadsl/react-img-slider",
+      "desc": "A Image Slider component that shows images on 5s interval and also shows the index underneath each image ",
+      "image": {
+        "desc": "Image-Slider",
+        "src": "images/image-slider.png",
+        "comment": ""
+      }
+    },
+    {
+      "title": "Query Emberjs App",
+      "href": "http://greedy-clouds.surge.sh/",
+      "desc": "An ember web application built to have a message board that allows junior developers and newbies learning to code to ask questions that senior developers, product owners can answer and help them out. Firebase was used for database and CSS for styling",
+      "image": {
+        "desc": "Query application using emberjs",
+        "src": "images/api.jpg",
+        "comment": ""
+      }
+    }
+  ]
+}
